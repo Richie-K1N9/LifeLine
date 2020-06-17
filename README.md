@@ -1,18 +1,25 @@
-# LifeLine
+# Lifeline
 Yr11 SDD Health Project
 
 Features:
  - Setup Menu
     - Name
+    - Gender (M/F/O)
     - Age
     - Height
     - Weight
  - Main Menu
     - Goals
-        - 10000 Steps
-        - 7-8 hr Sleep
-    - BMI
+        - Fitness goals
+        - Step Counter
+        - Sleep Tracker
+        - BMI
     - Exercises
-        - Push Up
-        - Situp
-        - HIIT
+        - Push Ups
+        - Sit ups
+        - HIIT 
+        - 
+    - Diet
+        - Calorie tracker
+        - Suggested food
+        - recipes
