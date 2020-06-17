@@ -8,9 +8,11 @@ Features:
     - Age
     - Height
     - Weight
+    - Recommended Fitness plan
+    - Other Fitness plans (easier and more difficult)
  - Main Menu
     - Goals
-        - Fitness goals
+        - Fitness plan you chose in setup phase
         - Step Counter
         - Sleep Tracker
         - BMI
