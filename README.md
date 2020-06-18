@@ -11,17 +11,18 @@ Features:
     - Other Fitness plans (easier and more difficult)
  - Main Menu
     - Goals
-<<<<<<< HEAD
         - Fitness plan you chose in setup phase
         - Step Counter
         - Sleep Tracker
         - BMI
-=======
         - 10000 Steps
         - 7-8 hr Sleep
-    - BMI
->>>>>>> parent of 48b66fc... Update README.md
     - Exercises
         - Push Up
         - Situp
         - HIIT
+        - Other fat burning excercises
+    - Diet
+        - Calorie tracker
+        - Recommended foods
+        - Food Recipe
