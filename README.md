@@ -25,4 +25,4 @@ Features:
     - Diet
         - Calorie tracker
         - Recommended foods
-        - Food Recipe
+        - Food Recipes
