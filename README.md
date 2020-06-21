@@ -8,19 +8,17 @@ Features:
     - Age
     - Height
     - Weight
-    - Recommended Fitness plan
-    - Other Fitness plans (easier and more difficult)
  - Main Menu
+    - BMI
     - Goals
         - Fitness plan you chose in setup phase
-        - Step Counter
-        - Sleep Tracker
-        - BMI
+        - Step Counter (10,000 Steps)
+        - Sleep Logger (7-8 hours)
     - Exercises
         - Push Ups
         - Sit ups
         - HIIT 
-        - 
+        - Fat Burning Exercises
     - Diet
         - Calorie tracker
         - Suggested food
