@@ -4,5 +4,6 @@ age = (input("Please enter your age"))
 
 height = (input("Input your height in meters: "))
 weight = (input("Input your weight in kilogram: "))
-print("Your body mass index is: ", round(weight / (height ** height), 2))
+bmi = weight/(height**2)
+print(bmi)
 
