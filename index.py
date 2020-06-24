@@ -1,10 +1,22 @@
 from tkinter import *
 
 root = Tk()
-root.overrideredirect(True)
+#root.overrideredirect(True)
 root.iconbitmap(r'C:\Users\Richie.King\Documents\GitHub\LifeLine\images\dark_logo.ico')
 root.title("LifeLine")
-root.geometry("1280x720") #Menu Size
+root.geometry("750x450") #Menu Size
 root.configure(bg='#23272A')
-root.mainloop()
 
+L1 = Label(root, text = "First")
+L2 = Label(root, text = "Second")
+
+L1.grid(row = 0, column = 0, sticky = W, pady = 2)
+L1.grid(row = 1, column = 0, sticky = W, pady = 2)
+
+e1 = Entry(root)
+e2 = Entry(root)
+
+e1.grid(row = 0, column= 1, pady = 2)
+e2.grid(row = 1, column= 2, pady = 2)
+
+root.mainloop()
