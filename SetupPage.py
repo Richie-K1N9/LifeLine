@@ -1,5 +1,9 @@
+from tkinter import *
+
+root = Tk()
+
 name = (input("Hello and welcome to Lifeline, please enter your name: "))
-print("Hello," + name)
+print("Hello, " + name)
 age = (input("Please enter your age: "))
 
 height = float(input("Enter height in meters: "))
