@@ -10,13 +10,13 @@ root.configure(bg='#23272A')
 L1 = Label(root, text = "First")
 L2 = Label(root, text = "Second")
 
-L1.grid(row = 0, column = 0, sticky = W, pady = 2)
-L1.grid(row = 1, column = 0, sticky = W, pady = 2)
+L1.grid(row = 0, column = 0)
+L1.grid(row = 1, column = 0)
 
 e1 = Entry(root)
 e2 = Entry(root)
 
-e1.grid(row = 0, column= 1, pady = 2)
-e2.grid(row = 1, column= 2, pady = 2)
+e1.grid(row = 0, column= 3)
+e2.grid(row = 1, column= 2)
 
 root.mainloop()
