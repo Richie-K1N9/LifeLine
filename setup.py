@@ -1,7 +1,8 @@
 from tkinter import *
 import tkinter as tk
 import tkinter.font as font
-import mysql.connector
+import time
+#import mysql.connector
 
 #Window properties
 root = Tk()
@@ -25,6 +26,13 @@ root.configure(bg='#23272A') #Background Colour
 
 #Bold font var
 h_f = font.Font(weight="bold", size=20)
+
+#Variables
+_data = StringVar()
+_data = StringVar()
+_data = StringVar()
+_data = StringVar()
+_data = StringVar()
 
 #Info
 title = Label(root, text = "Welcome to LifeLine")
@@ -62,7 +70,7 @@ height_box.grid(row= 6, column= 4, pady=5)
 weight_box.grid(row= 7, column= 4, pady=5)
 
 #Output Data
-well = Label(root, text="Welcome " + str(f_name))
+well = Label(root, text="Welcome " + f_name_box.get())
 
 #Output Grid
 well.grid(row= 8, column=2, pady=10)
