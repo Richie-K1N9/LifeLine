@@ -1,69 +1,78 @@
 from tkinter import *
-from PIL import ImageTk, Image
-import sqlite3
+import tkinter as tk
+import tkinter.font as font
+import time
+#import mysql.connector
 
-#Startup
+#Window properties
 root = Tk()
 #root.overrideredirect(True)
 root.iconbitmap(r'C:\Users\Richie.King\Documents\GitHub\LifeLine\images\dark_logo.ico') #Icon
 root.title("LifeLine") #Title
-root.geometry("750x450") #Menu Size
-#root.configure(bg='#23272A') #Background Colour
+root.geometry("475x450") #Menu Size
+root.configure(bg='#23272A') #Background Colour
 
-data = sqlite3.connect('user.db')
-	
-d = data.cursor()
+#Database
+#db = mysql.connector.connect(
+#    host="localhost",
+#    user="yourusername",
+#    password="yourpassword",
+#    database="data"
+#)
+#
+#mycursor = db.cursor()
+#
+#mycursor.execute("CREATE TABLE data (f_name VARCHAR(255), l_name VARCHAR(255))")
 
-d.execute('''CREATE TABLE user (first_name text, last_name text, date_of_birth text, height text, weight text)''')
+#Bold font var
+h_f = font.Font(weight="bold", size=20)
 
-#Submit Function for Database
-def submit():
+#Variables
+_data = StringVar()
+_data = StringVar()
+_data = StringVar()
+_data = StringVar()
+_data = StringVar()
 
-	#Create Database or connect
-	data = sqlite3.connect('user.db')
-	
-	#Create cursor
-	d = data.cursor()
-	
-	#Insert into Table
-	
-	#Commit Changes
-	data.commit()
-	
-	#Close Connection
-	data.close()
-	
-	#Clear Boxes
-	f_name.delete(0, END)
-	l_name.delete(0, END)
-	d_o_b.delete(0, END)
-	height.delete(0, END)
-	weight.delete(0, END)
-	
-#Boxes
-f_name = Entry(root, width=30)
-f_name.grid(row=0, column=1, padx=20)
-l_name = Entry(root, width=30)
-l_name.grid(row=1, column=1)
-d_o_b = Entry(root, width=30)
-d_o_b.grid(row=2, column=1)
-height = Entry(root, width=30)
-height.grid(row=3, column=1)
-weight = Entry(root, width=30)
-weight.grid(row=4, column=1)
+#Info
+title = Label(root, text = "Welcome to LifeLine")
+title['font'] = h_f
+f_name = Label(root, text = "First Name")
+l_name = Label(root, text = "Last Name")
+dob = Label(root, text = "Age")
+height = Label(root, text = "Height")
+weight = Label(root, text = "Weight")
 
-f_name_label = Label(root, text="First Name")
-f_name_label.grid(row=0, column=0)
-l_name_label = Label(root, text="Last Name")
-l_name_label.grid(row=1, column=0)
-d_o_b_label = Label(root, text="Date of Birth")
-d_o_b_label.grid(row=2, column=0)
-height_label = Label(root, text="Height")
-height_label.grid(row=3, column=0)
-weight_label = Label(root, text="Weight")
-weight_label.grid(row=4, column=0)
+f_data = tk.StringVar()
+l_data = tk.StringVar()
+dob_data = tk.StringVar()
+height_data = tk.StringVar()
+weight_data = tk.StringVar()
 
-submit_btn = Button(root, text="Add Record To Database", command=submit)
-submit_btn.grid(row=5, column=0)
+#Text Boxes
+f_name_box = Entry(root, textvariable=f_data)
+l_name_box = Entry(root, textvariable=l_data)
+dob_box = Entry(root, textvariable=dob_data)
+height_box = Entry(root, textvariable=height_data)
+weight_box = Entry(root, textvariable=weight_data)
+
+#Canvas
+title.grid(row= 2, column= 3, pady=15)
+f_name.grid(row= 3, column= 2, pady=5)
+l_name.grid(row= 4, column= 2, pady=5)
+dob.grid(row= 5, column= 2, pady=5)
+height.grid(row= 6, column= 2, pady=5)
+weight.grid(row= 7, column= 2, pady=5)
+f_name_box.grid(row= 3, column= 4, pady=5)
+l_name_box.grid(row= 4, column= 4, pady=5)
+dob_box.grid(row= 5, column= 4, pady=5)
+height_box.grid(row= 6, column= 4, pady=5)
+weight_box.grid(row= 7, column= 4, pady=5)
+
+#Output Data
+well = Label(root, text="Welcome " + f_name_box.get())
+
+#Output Grid
+well.grid(row= 8, column=2, pady=10)
 
 root.mainloop()
