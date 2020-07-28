@@ -7,24 +7,11 @@ import time
 #Window properties
 root = Tk()
 #root.overrideredirect(True)
-root.iconbitmap(r'C:\Users\Richie.King\Documents\GitHub\LifeLine\images\dark_logo.ico') #Icon
+#root.iconbitmap(r'C:\Users\Richie.King\Documents\GitHub\LifeLine\images\dark_logo.ico') #Icon
 root.title("LifeLine") #Title
 root.geometry("460x450") #Menu Size
 root.configure(bg='#23272A') #Background Colour
 
-#Database
-#db = mysql.connector.connect(
-#    host="localhost",
-#    user="yourusername",
-#    password="yourpassword",
-#    database="data"
-#)
-#
-#mycursor = db.cursor()
-#
-#mycursor.execute("CREATE TABLE data (f_name VARCHAR(255), l_name VARCHAR(255))")
-
-#Bold font var
 h_f = font.Font(weight="bold", size=20)
 
 bmi = 0
