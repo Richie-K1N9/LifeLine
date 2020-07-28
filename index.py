@@ -8,9 +8,9 @@ import time
 root = Tk()
 #root.overrideredirect(True)
 #root.iconbitmap(r'C:\Users\Richie.King\Documents\GitHub\LifeLine\images\dark_logo.ico') #Icon
-root.title("LifeLine") #Title
+root.title("Lifeline") #Title
 root.geometry("460x450") #Menu Size
-root.configure(bg='#23272A') #Background Colour
+#root.configure(bg='#23272A') #Background Colour
 
 h_f = font.Font(weight="bold", size=20)
 
@@ -21,11 +21,11 @@ def retrieve_input(self):
     print(input)
 
 #Info
-title = Label(root, text = "Welcome to LifeLine")
+title = Label(root, text = "Welcome to Lifeline")
 title['font'] = h_f
 dob = Label(root, text = "Age")
-height = Label(root, text = "Height")
-weight = Label(root, text = "Weight")
+height = Label(root, text = "Height (In Meters)")
+weight = Label(root, text = "Weight (In Kgs)")
 
 dob_data = tk.StringVar()
 height_data = tk.StringVar()
