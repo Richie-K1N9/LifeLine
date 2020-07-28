@@ -11,4 +11,8 @@ buttonCommit=Button(root, height=1, width=10, text="Commit",
 #command=lambda: retrieve_input() >>> just means do this when i press the button
 buttonCommit.pack()
 
+text = Label(root, text = inputValue)
+
+buttonCommit.pack()
+
 mainloop()

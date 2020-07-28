@@ -10,14 +10,14 @@ root = Tk()
 #root.iconbitmap(r'C:\Users\Richie.King\Documents\GitHub\LifeLine\images\dark_logo.ico') #Icon
 root.title("LifeLine") #Title
 root.geometry("460x450") #Menu Size
-root.configure(bg='#23272A') #Background Colour
+#root.configure(bg='#23272A') #Background Colour
 
 h_f = font.Font(weight="bold", size=20)
 
 bmi = 0
 
-def retrieve_input(self):
-    input = self.dob_data.get("1.0",END)
+def retrieve_input():
+    input = self.dob_data.get("1.0","end-1c")
     print(input)
 
 #Info
