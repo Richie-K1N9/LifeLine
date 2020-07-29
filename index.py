@@ -14,11 +14,18 @@ root.geometry("460x450") #Menu Size
 
 h_f = font.Font(weight="bold", size=20)
 
-bmi = 0
+bmi2 = StringVar()
 
-def retrieve_input():
-    input = self.dob_data.get("1.0","end-1c")
-    print(input)
+def bmi_run():
+    age_data = dob_box.get("1.0", "end-1c")
+    height_data = height_box.get("1.0", "end-1c")
+    weight_data = weight_box.get("1.0", "end-1c")
+    print("Age: " + age_data)
+    print("Height: " + height_data)
+    print("Weight: " + weight_data)
+    bmi = int(weight_data)/((int(height_data)/100)**2)
+    bmi2 = round(bmi,2)
+    print(bmi2)
 
 #Info
 title = Label(root, text = "Welcome to LifeLine")
@@ -27,17 +34,13 @@ dob = Label(root, text = "Age")
 height = Label(root, text = "Height")
 weight = Label(root, text = "Weight")
 
-dob_data = tk.StringVar()
-height_data = tk.StringVar()
-weight_data = tk.StringVar()
-
 #Text Boxes
-dob_box = Entry(root, textvariable=dob_data)
-height_box = Entry(root, textvariable=height_data)
-weight_box = Entry(root, textvariable=weight_data)
+dob_box = Text(root, height= 1, width= 10)
+height_box =Text(root, height= 1, width= 10)
+weight_box = Text(root, height= 1, width= 10)
 
 #Button
-update = Button(root, text="Update", command= retrieve_input)
+update = Button(root, text="Update", command= bmi_run)
 
 #Canvas
 title.grid(row= 2, column= 3, pady=15)
@@ -49,7 +52,7 @@ height_box.grid(row= 6, column= 4, pady=5)
 weight_box.grid(row= 7, column= 4, pady=5)
 update.grid(row= 8, column= 3)
 
-bmi = Label(root, text = input)
+bmi = Label(root, text = bmi2)
 bmi.grid(row= 9, column= 3)
 
 root.mainloop()
