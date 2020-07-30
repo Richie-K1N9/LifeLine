@@ -1,7 +1,8 @@
 from tkinter import *
+import tkinter as tk
 
 root = Tk()
-top = Tkinter.Tk()
+top = tk.Tk()
 name = (input("Hello and welcome to Lifeline, please enter your name: "))
 print("Hello, " + name)
 age = (input("Please enter your age: "))
