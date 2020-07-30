@@ -26,6 +26,7 @@ def bmi_run():
     bmi = int(weight_data)/((int(height_data)/100)**2)
     bmi2 = round(bmi,2)
     print(bmi2)
+    self.label['bmi2'] = bmi2
 
 #Info
 title = Label(root, text = "Welcome to LifeLine")
@@ -52,7 +53,7 @@ height_box.grid(row= 6, column= 4, pady=5)
 weight_box.grid(row= 7, column= 4, pady=5)
 update.grid(row= 8, column= 3)
 
-bmi = Label(root, text = bmi2)
-bmi.grid(row= 9, column= 3)
+bmi_text = Label(root, text = bmi2)
+bmi_text.grid(row= 9, column= 3)
 
 root.mainloop()
