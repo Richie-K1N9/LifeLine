@@ -2,15 +2,13 @@ from tkinter import *
 import tkinter as tk
 import tkinter.font as font
 import time
-#import mysql.connector
+from tkinter.messagebox import showinfo
 
 #Window properties
 root = Tk()
-#root.overrideredirect(True)
-#root.iconbitmap(r'C:\Users\Richie.King\Documents\GitHub\LifeLine\images\dark_logo.ico') #Icon
 root.title("Lifeline") #Title
-root.geometry("460x450") #Menu Size
-#root.configure(bg='#23272A') #Background Colour
+root.geometry("525x450") #Menu Size
+root.configure(bg='#23272A') #Background Colour
 
 h_f = font.Font(weight="bold", size=20)
 
@@ -31,9 +29,9 @@ def bmi_run():
 #Info
 title = Label(root, text = "Welcome to Lifeline")
 title['font'] = h_f
-dob = Label(root, text = "Age")
-height = Label(root, text = "Height (In Meters)")
-weight = Label(root, text = "Weight (In Kgs)")
+dob = Label(root, text = "Age", background = '#23272A', fg = 'white')
+height = Label(root, text = "Height (In Meters)", background='#23272A', fg='white')
+weight = Label(root, text = "Weight (In Kgs)", background='#23272A', fg='white')
 
 #Text Boxes
 dob_box = Text(root, height= 1, width= 10)
@@ -53,7 +51,13 @@ height_box.grid(row= 6, column= 4, pady=5)
 weight_box.grid(row= 7, column= 4, pady=5)
 update.grid(row= 8, column= 3)
 
-bmi_text = Label(root, text = bmi2)
-bmi_text.grid(row= 9, column= 3)
+#exercise
+ex = Label(root, text = "Recrommended Exercise")
+ex['font'] = h_f
+ex.grid(row= 9, column= 3)
+
+#pushups
+pushup = Label(root, text = "Pushups", background = '#23272A', fg = 'white')
+
 
 root.mainloop()
